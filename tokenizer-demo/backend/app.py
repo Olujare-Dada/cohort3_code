@@ -65,7 +65,7 @@ def tokenize_text_value(text: str, tokenizer_name: TokenizerName) -> Dict[str, A
 
 @app.get("/health")
 def health_check() -> dict[str, str]:
-    return {"status": "ok"}
+    return {"status": "ok", "message": "Tokenizer service is running"}
 
 
 @app.head("/health", include_in_schema=False)
