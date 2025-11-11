@@ -25,6 +25,8 @@ This simple two-part project helps students see how text can be tokenized. The b
    pip install -r requirements.txt
    ```
 
+   > **Deploying on Render (or other buildpacks):** ensure the Python runtime is 3.11. A `runtime.txt` (set to `python-3.11.9`) is provided in the `backend/` folder for Render so pre-built wheels for `tokenizers` are available and no Rust toolchain is required.
+
 3. Run the API (reload flag is optional but handy during development):
 
    ```powershell

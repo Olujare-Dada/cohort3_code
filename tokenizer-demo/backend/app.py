@@ -68,6 +68,11 @@ def health_check() -> dict[str, str]:
     return {"status": "ok"}
 
 
+@app.head("/health", include_in_schema=False)
+def health_check_head() -> None:
+    return None
+
+
 @app.get("/tokenizers")
 def list_tokenizers() -> Dict[str, List[str]]:
     return {"tokenizers": [tokenizer.value for tokenizer in TokenizerName]}
