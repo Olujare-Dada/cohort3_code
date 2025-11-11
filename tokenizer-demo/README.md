@@ -44,7 +44,7 @@ cd frontend
 start index.html
 ```
 
-If you run the backend on a different host/port, update `API_BASE_URL` inside `frontend/script.js`.
+If you run the backend on a different host/port, update `API_BASE_URL` inside `frontend/script.js`. The script also checks for a `window.API_BASE_URL` value at runtime so you can override it without editing the file (e.g. before including `script.js`).
 
 ## API Reference
 

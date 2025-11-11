@@ -1,4 +1,5 @@
-const API_BASE_URL = "http://127.0.0.1:8000";
+const API_BASE_URL =
+  window.API_BASE_URL || "https://cohort3-code.onrender.com";
 
 const form = document.getElementById("token-form");
 const textInput = document.getElementById("text-input");
