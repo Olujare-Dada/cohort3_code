@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tokenizer Demo</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <section class="card">
+        <h1>Tokenizer Demo</h1>
+        <p class="description">
+          Enter any text and see how the tokenizer breaks it down into tokens.
+        </p>
+        <form id="token-form">
+          <label for="tokenizer-select">Choose tokenizer</label>
+          <select id="tokenizer-select">
+            <option value="simple">Simple (Regex)</option>
+            <option value="bert-base-uncased">Hugging Face BERT (uncased)</option>
+            <option value="cl100k_base">OpenAI cl100k_base</option>
+          </select>
+
+          <label for="text-input">Enter text</label>
+          <textarea
+            id="text-input"
+            rows="4"
+            placeholder="Type a word, sentence, or set of characters..."
+            required
+          ></textarea>
+          <button type="submit">Tokenize</button>
+        </form>
+      </section>
+
+      <section class="card" id="results-card" hidden>
+        <div class="results-header">
+          <h2>Tokens</h2>
+          <div class="results-meta">
+            <span id="selected-tokenizer"></span>
+            <span id="token-count"></span>
+          </div>
+        </div>
+        <ul id="tokens-list"></ul>
+      </section>
+
+      <section class="card error-card" id="error-card" hidden>
+        <h2>Something went wrong</h2>
+        <p id="error-message"></p>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
+
